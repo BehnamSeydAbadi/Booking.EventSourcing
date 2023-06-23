@@ -1,9 +1,8 @@
 ﻿namespace Booking.EventSourcing.Events;
 
-public class BookingEvents
+public class BookingEvent
 {
     public int Id { get; set; }
-
     public int StreamId { get; set; }
     public int Version { get; set; }
     public EventType Type { get; set; }
