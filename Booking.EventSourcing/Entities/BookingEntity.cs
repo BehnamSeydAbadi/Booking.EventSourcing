@@ -2,7 +2,7 @@
 
 public class BookingEntity
 {
-    public int Id { get; set; }
+    public string Id { get; set; } = Guid.NewGuid().ToString();
     public string SportName { get; set; }
     public DateTime DateTime { get; set; }
     public string UserFullName { get; set; }
