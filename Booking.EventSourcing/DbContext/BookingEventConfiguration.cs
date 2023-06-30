@@ -12,10 +12,11 @@ public class BookingEventConfiguration : IEntityTypeConfiguration<BookingEvent>
 
     public void Configure(EntityTypeBuilder<BookingEvent> builder)
     {
-        builder.HasKey(be => be.StreamId);
+        builder.HasKey(be => be.Id);
+        builder.Property(be => be.StreamId).IsRequired();
         builder.Property(be => be.Name).HasMaxLength(256).IsRequired();
         builder.Property(be => be.Type).HasConversion<int>().IsRequired();
-        builder.Property(be => be.Data).HasMaxLength(10240).IsRequired();
+        builder.Property(be => be.Data).HasMaxLength(10240).IsRequired(false);
         builder.Property(be => be.DateTime).IsRequired();
     }
 }

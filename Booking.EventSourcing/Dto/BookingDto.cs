@@ -1,8 +1,7 @@
-﻿namespace Booking.EventSourcing.Entities;
+﻿namespace Booking.EventSourcing.Dto;
 
-public class BookingEntity
+public record BookingDto
 {
-    public int Id { get; set; }
     public string SportName { get; set; }
     public DateTime DateTime { get; set; }
     public string UserFullName { get; set; }
